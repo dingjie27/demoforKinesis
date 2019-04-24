@@ -1,4 +1,4 @@
-package com.kinesis.demo.service;
+package com.kinesis.demo.service.consumer;
 
 
 import software.amazon.kinesis.exceptions.InvalidStateException;
@@ -9,7 +9,7 @@ import software.amazon.kinesis.retrieval.KinesisClientRecord;
 
 import java.util.Iterator;
 
-public class TestRecordProcessor implements ShardRecordProcessor {
+public class RecordProcessor implements ShardRecordProcessor {
     private String shardId = "shardId-000000000001";
 
 

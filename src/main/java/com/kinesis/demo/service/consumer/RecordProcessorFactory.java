@@ -1,12 +1,12 @@
-package com.kinesis.demo.service;
+package com.kinesis.demo.service.consumer;
 
 
 import software.amazon.kinesis.processor.ShardRecordProcessor;
 import software.amazon.kinesis.processor.ShardRecordProcessorFactory;
 
-public class TestRecordProcessorFactory implements ShardRecordProcessorFactory {
+public class RecordProcessorFactory implements ShardRecordProcessorFactory {
     @Override
     public ShardRecordProcessor shardRecordProcessor() {
-        return new TestRecordProcessor();
+        return new RecordProcessor();
     }
 }

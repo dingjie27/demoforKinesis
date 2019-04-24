@@ -1,4 +1,4 @@
-package com.kinesis.demo.service;
+package com.kinesis.demo.service.consumer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;

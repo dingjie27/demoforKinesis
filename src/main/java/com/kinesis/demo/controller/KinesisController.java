@@ -1,6 +1,6 @@
 package com.kinesis.demo.controller;
 
-import com.kinesis.demo.service.Producer;
+import com.kinesis.demo.service.producer.Producer;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

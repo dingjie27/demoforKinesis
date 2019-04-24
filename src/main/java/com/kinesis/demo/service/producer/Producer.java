@@ -1,4 +1,4 @@
-package com.kinesis.demo.service;
+package com.kinesis.demo.service.producer;
 
 import com.alibaba.fastjson.JSON;
 import com.amazonaws.services.kinesis.AmazonKinesis;

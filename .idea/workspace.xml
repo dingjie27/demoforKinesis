@@ -10,24 +10,6 @@
       <change afterPath="$PROJECT_DIR$/../awsservice/src/main/java/com/aws/servicedemo/configuration/S3Configuration.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../awsservice/src/main/resources/application.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../demo/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/DemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/configuraion/AmazonKinesisClientProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/configuraion/SqsClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/configuraion/Swagger2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/controller/KinesisController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/pojo/Msg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/Consumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/MyConsumerRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/Producer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/TestRecordProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/TestRecordProcessorFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/kinesis/demo/DemoApplicationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -59,11 +41,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/Producer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/MyConsumerRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,9 +108,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo.iml">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kinesis/demo/configuraion/SqsClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -286,6 +304,62 @@
               <item name="demoforKinesis" type="b2602c69:ProjectViewProjectNode" />
               <item name="demoforKinesis" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="demoforKinesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demoforKinesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demoforKinesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demoforKinesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demoforKinesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demoforKinesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demoforKinesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demoforKinesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demoforKinesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demoforKinesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kinesis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demoforKinesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demoforKinesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kinesis" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demoforKinesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demoforKinesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kinesis" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -299,7 +373,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556096341348" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556098051182" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -333,7 +407,7 @@
       <module name="demoforKinesis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kinesis.demo.service.*" />
+          <option name="PATTERN" value="com.kinesis.demo.service.consumer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -346,7 +420,7 @@
       <module name="demoforKinesis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kinesis.demo.service.*" />
+          <option name="PATTERN" value="com.kinesis.demo.service.consumer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -366,7 +440,7 @@
       <module name="demoforKinesis" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kinesis.demo.service.*" />
+          <option name="PATTERN" value="com.kinesis.demo.service.consumer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -405,12 +479,12 @@
       <workItem from="1556086301331" duration="2518000" />
       <workItem from="1556089071915" duration="5794000" />
       <workItem from="1556095873961" duration="276000" />
-      <workItem from="1556096223052" duration="339000" />
+      <workItem from="1556096223052" duration="683000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36315000" />
+    <option name="totallyTimeSpent" value="36659000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -450,7 +524,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.3294881" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3294881" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.3294881" />
@@ -677,16 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kinesis/demo/configuraion/SqsClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kinesis/demo/controller/KinesisController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -787,26 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/Producer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/MyConsumerRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -933,6 +977,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo.iml">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kinesis/demo/configuraion/SqsClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/MyConsumerRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

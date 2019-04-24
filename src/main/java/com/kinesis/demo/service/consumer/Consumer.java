@@ -1,4 +1,4 @@
-package com.kinesis.demo.service;
+package com.kinesis.demo.service.consumer;
 
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.regions.Region;
@@ -31,7 +31,7 @@ public class Consumer {
         DynamoDbAsyncClient dynamoClient = DynamoDbAsyncClient.builder().region(region).build();
         CloudWatchAsyncClient cloudWatchClient = CloudWatchAsyncClient.builder().region(region).build();
 
-        ConfigsBuilder configsBuilder = new ConfigsBuilder(streamName, streamName, kinesisClient, dynamoClient, cloudWatchClient, UUID.randomUUID().toString(), new TestRecordProcessorFactory());
+        ConfigsBuilder configsBuilder = new ConfigsBuilder(streamName, streamName, kinesisClient, dynamoClient, cloudWatchClient, UUID.randomUUID().toString(), new RecordProcessorFactory());
 
         Scheduler scheduler = new Scheduler(
                 configsBuilder.checkpointConfig(),
