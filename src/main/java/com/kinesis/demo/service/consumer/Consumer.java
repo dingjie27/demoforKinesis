@@ -6,8 +6,11 @@ import software.amazon.awssdk.services.cloudwatch.CloudWatchAsyncClient;
 import software.amazon.awssdk.services.dynamodb.DynamoDbAsyncClient;
 import software.amazon.awssdk.services.kinesis.KinesisAsyncClient;
 import software.amazon.kinesis.common.ConfigsBuilder;
+import software.amazon.kinesis.common.InitialPositionInStream;
+import software.amazon.kinesis.common.InitialPositionInStreamExtended;
 import software.amazon.kinesis.common.KinesisClientUtil;
 import software.amazon.kinesis.coordinator.Scheduler;
+import software.amazon.kinesis.leases.LeaseManagementConfig;
 
 import java.util.UUID;
 import java.util.concurrent.Executors;
@@ -16,11 +19,6 @@ import java.util.concurrent.ScheduledExecutorService;
 @Service
 public class Consumer {
     private static String streamName = "bitmain-poc-kinesis";
-
-//    public static void main(String[] args) {
-//        Consumer consumer =new Consumer();
-//        consumer.run();
-//    }
 
     public static void run() {
         ScheduledExecutorService consumerExecutor = Executors.newSingleThreadScheduledExecutor();
@@ -32,7 +30,6 @@ public class Consumer {
         CloudWatchAsyncClient cloudWatchClient = CloudWatchAsyncClient.builder().region(region).build();
 
         ConfigsBuilder configsBuilder = new ConfigsBuilder(streamName, streamName, kinesisClient, dynamoClient, cloudWatchClient, UUID.randomUUID().toString(), new RecordProcessorFactory());
-
         Scheduler scheduler = new Scheduler(
                 configsBuilder.checkpointConfig(),
                 configsBuilder.coordinatorConfig(),

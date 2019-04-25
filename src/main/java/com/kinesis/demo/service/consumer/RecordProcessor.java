@@ -10,7 +10,7 @@ import software.amazon.kinesis.retrieval.KinesisClientRecord;
 import java.util.Iterator;
 
 public class RecordProcessor implements ShardRecordProcessor {
-    private String shardId = "shardId-000000000001";
+    private String shardId = "shardId";
 
 
     @Override
@@ -44,11 +44,23 @@ public class RecordProcessor implements ShardRecordProcessor {
 
     @Override
     public void shardEnded(ShardEndedInput shardEndedInput) {
-
+        try {
+            shardEndedInput.checkpointer().checkpoint();
+        } catch (InvalidStateException e) {
+            e.printStackTrace();
+        } catch (ShutdownException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void shutdownRequested(ShutdownRequestedInput shutdownRequestedInput) {
-
+        try {
+            shutdownRequestedInput.checkpointer().checkpoint();
+        } catch (InvalidStateException e) {
+            e.printStackTrace();
+        } catch (ShutdownException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -21,6 +21,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
+//public class Producer implements Runnable {
 public class Producer {
     @Autowired
     AmazonKinesis amazonKinesis;
@@ -87,4 +88,9 @@ public class Producer {
                 .withEntries(failedRecordsListForSqs);
         sqsClient.sendMessageBatch(send_batch_request);
     }
+// 多线程模式请自动修改bean的获取方式
+//    @Override
+//    public void run() {
+//        putRecord(this.defaultStreamName);
+//    }
 }
