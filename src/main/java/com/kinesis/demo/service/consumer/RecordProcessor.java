@@ -16,6 +16,7 @@ public class RecordProcessor implements ShardRecordProcessor {
     @Override
     public void initialize(InitializationInput initializationInput) {
         shardId = initializationInput.shardId();
+        System.out.println("current shardId is ： " + shardId);
         initializationInput.pendingCheckpointSequenceNumber();
     }
 

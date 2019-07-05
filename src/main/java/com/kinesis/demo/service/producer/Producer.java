@@ -42,7 +42,7 @@ public class Producer {
         putRecordsRequest.setStreamName(streamName);
         List<PutRecordsRequestEntry> putRecordsRequestEntryList = new ArrayList<>();
         Msg msg = new Msg();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 300; i++) {
             msg.setMaintenance_end_date(new Date());
             String msgContent = JSON.toJSONString(msg);
 
