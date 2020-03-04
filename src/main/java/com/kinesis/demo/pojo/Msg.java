@@ -7,10 +7,10 @@ public class Msg {
     String model_id="007db43c18be4b0098f26886510d13b9";
     String miner_farm_id="59fe4dbc";
     int repair_order_id=22907;
-    String brand_id="AntMiner";
+    String brand_id="test-kinesis";
     int chip_count=180;
     String unit="G";
-    String customer_email="shaohua.wang@bitmain.com";
+    String customer_email="xxx@abc.com";
     int site_id=5;
     String computing_power="22000.0000";
     String sn="FXDZ47BAHABBF07N3";
