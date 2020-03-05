@@ -1,6 +1,8 @@
 package com.kinesis.demo.service.consumer;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import software.amazon.kinesis.exceptions.InvalidStateException;
 import software.amazon.kinesis.exceptions.ShutdownException;
 import software.amazon.kinesis.lifecycle.events.*;
@@ -9,14 +11,14 @@ import software.amazon.kinesis.retrieval.KinesisClientRecord;
 
 import java.util.Iterator;
 
-public class RecordProcessor implements ShardRecordProcessor {
+public class FanoutRecordProcessor implements ShardRecordProcessor {
     private String shardId = "shardId";
-
+    private static final Logger log = LoggerFactory.getLogger(FanoutRecordProcessor.class);
 
     @Override
     public void initialize(InitializationInput initializationInput) {
         shardId = initializationInput.shardId();
-        System.out.println("current shardId is ： " + shardId);
+        log.info("Initializing @ shardId id : {}", shardId);
         initializationInput.pendingCheckpointSequenceNumber();
     }
 

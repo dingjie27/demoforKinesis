@@ -49,7 +49,7 @@ public class StandardConsumer {
 
     private static final Logger log = LoggerFactory.getLogger(StandardConsumer.class);
     private static String streamName = "my-test-kinesis-data-stream";
-    private static String applicationName = "fan-out-consumer";
+    private static String applicationName = "standard-consumer";
     Region region = Region.US_EAST_1;
     private final KinesisAsyncClient kinesisAsyncClient;
 
