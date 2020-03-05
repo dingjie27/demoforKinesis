@@ -3,19 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ff4d61e0-ea6f-4293-9854-a1c23e752a93" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/FanoutConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/FanoutConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/RecordProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/FanoutRecordProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/RecordProcessorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/FanoutRecordProcessorFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/controller/KinesisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/controller/KinesisController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/producer/MyProducerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/producer/MyProducerRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/standardconsumer/StandardConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/standardconsumer/StandardConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/FanoutConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/FanoutConsumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/RecordProcessor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/RecordProcessorFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/producer/MyProducerRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/producer/MyProducerRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/producer/ProducerUsingAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/producer/ProducerUsingAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/producer/ProducerUsingKinesisAsyncClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/producer/ProducerUsingKinesisAsyncClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/standardconsumer/StandardConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/standardconsumer/StandardConsumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/standardconsumer/StandardConsumerRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/standardconsumer/StandardConsumerRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/producer/ProducerUsingAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/producer/ProducerUsingAPI.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +209,7 @@
       <workItem from="1562308758937" duration="1822000" />
       <workItem from="1583304765372" duration="4090000" />
       <workItem from="1583309206479" duration="37000" />
-      <workItem from="1583309520417" duration="29833000" />
+      <workItem from="1583309520417" duration="30674000" />
     </task>
     <task id="LOCAL-00001" summary="commit my new updates">
       <created>1556155578213</created>

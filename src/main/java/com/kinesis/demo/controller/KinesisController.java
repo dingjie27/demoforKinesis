@@ -27,12 +27,7 @@ public class KinesisController {
         producerUsingAPI.putRecord(streamName);
     }
 
-    @ApiOperation(value = "get kinesis stream name", notes = "stream name")
-    @RequestMapping(value = "streamName", method = RequestMethod.GET)
-    public String getStreamName() {
-//       return producer.run();
-        return null;
-    }
+
     @ApiOperation(value = "使用KinesisAsyncClient批量上传数据", notes = "批量性能更好")
     @RequestMapping(value = "batchput", method = RequestMethod.GET)
     public void batchPutRecordsUsingKinesisAsyncClient() {

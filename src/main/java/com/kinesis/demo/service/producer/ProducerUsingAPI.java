@@ -10,6 +10,8 @@ import com.amazonaws.services.sqs.AmazonSQS;
 import com.amazonaws.services.sqs.model.SendMessageBatchRequest;
 import com.amazonaws.services.sqs.model.SendMessageBatchRequestEntry;
 import com.kinesis.demo.pojo.Msg;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -32,6 +34,7 @@ public class ProducerUsingAPI {
 
     @Value("${aws.sqs.url}")
     String sqsUrl;
+    private final Logger log = LoggerFactory.getLogger(ProducerUsingAPI.class);
 
     public void putRecord(String streamName) {
         PutRecordsRequest putRecordsRequest = new PutRecordsRequest();
@@ -41,7 +44,7 @@ public class ProducerUsingAPI {
         putRecordsRequest.setStreamName(streamName);
         List<PutRecordsRequestEntry> putRecordsRequestEntryList = new ArrayList<>();
         Msg msg = new Msg();
-        for (int i = 0; i < 300; i++) {
+        for (int i = 0; i < 10; i++) {
             msg.setMaintenance_end_date(new Date());
             String msgContent = JSON.toJSONString(msg);
 
@@ -55,11 +58,10 @@ public class ProducerUsingAPI {
         //每X条数据提交一次，数据最好是25KB的整数倍
         putRecordsRequest.setRecords(putRecordsRequestEntryList);
         PutRecordsResult putRecordsResult = amazonKinesis.putRecords(putRecordsRequest);
+        log.info("Put Result {}", putRecordsResult);
 
-        System.out.println("Put Result" + putRecordsResult);
 
-
-        //提交失败的数据放入sqs
+        // Process the failed messages
         final List<SendMessageBatchRequestEntry> failedRecordsListForSqs = new ArrayList<>();
         if (putRecordsResult.getFailedRecordCount() > 0) {
             while (putRecordsResult.getFailedRecordCount() > 0) {
@@ -74,13 +76,13 @@ public class ProducerUsingAPI {
                 }
 
             }
-//            sendFailedMsgToSQS(failedRecordsListForSqs);
+            sendFailedMsgToSQS(failedRecordsListForSqs);
         }
 
     }
 
 
-    //    将发送失败的消息统一发送到sqs中等待处理
+    //    Send all the failed msg to sqs for further process
     public void sendFailedMsgToSQS(List<SendMessageBatchRequestEntry> failedRecordsListForSqs) {
 
         SendMessageBatchRequest send_batch_request = new SendMessageBatchRequest()
