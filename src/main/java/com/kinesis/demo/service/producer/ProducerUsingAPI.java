@@ -7,6 +7,7 @@ import com.amazonaws.services.kinesis.model.PutRecordsRequestEntry;
 import com.amazonaws.services.kinesis.model.PutRecordsResult;
 import com.amazonaws.services.kinesis.model.PutRecordsResultEntry;
 import com.amazonaws.services.sqs.AmazonSQS;
+import com.amazonaws.services.sqs.model.SendMessageBatchRequest;
 import com.amazonaws.services.sqs.model.SendMessageBatchRequestEntry;
 import com.kinesis.demo.pojo.Msg;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,8 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-//public class Producer {
-public class ProducerUsingAPI implements Runnable {
+public class ProducerUsingAPI {
+    //public class ProducerUsingAPI implements Runnable {
     @Autowired
     AmazonKinesis amazonKinesis;
     @Autowired
@@ -79,18 +80,18 @@ public class ProducerUsingAPI implements Runnable {
     }
 
 
-    //将发送失败的消息统一发送到sqs中等待处理
-//    public void sendFailedMsgToSQS(List<SendMessageBatchRequestEntry> failedRecordsListForSqs) {
-//
-//        SendMessageBatchRequest send_batch_request = new SendMessageBatchRequest()
-//                .withQueueUrl(sqsUrl)
-//                .withEntries(failedRecordsListForSqs);
-//        sqsClient.sendMessageBatch(send_batch_request);
-//    }
-// 多线程模式请自动修改bean的获取方式
-    @Override
-    public void run() {
-        putRecord(this.defaultStreamName);
+    //    将发送失败的消息统一发送到sqs中等待处理
+    public void sendFailedMsgToSQS(List<SendMessageBatchRequestEntry> failedRecordsListForSqs) {
+
+        SendMessageBatchRequest send_batch_request = new SendMessageBatchRequest()
+                .withQueueUrl(sqsUrl)
+                .withEntries(failedRecordsListForSqs);
+        sqsClient.sendMessageBatch(send_batch_request);
     }
+// 多线程模式请自动修改bean的获取方式
+//    @Override
+//    public void run() {
+//        putRecord(this.defaultStreamName);
+//    }
 
 }
