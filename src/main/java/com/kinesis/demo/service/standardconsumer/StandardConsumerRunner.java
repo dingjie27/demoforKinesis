@@ -18,5 +18,4 @@ public class StandardConsumerRunner implements ApplicationRunner {
         log.info("My standard consumer is running.....");
         consumer.startConsume();
     }
-
 }
