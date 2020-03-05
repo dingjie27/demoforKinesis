@@ -13,7 +13,7 @@ public class MyConsumerRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments var1) throws Exception {
         System.out.println("MyConsumerRunner is running.....");
-//        consumer.run();
+        consumer.run();
 
     }
 

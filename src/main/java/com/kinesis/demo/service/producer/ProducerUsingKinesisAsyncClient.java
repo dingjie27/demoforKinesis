@@ -1,27 +1,21 @@
 package com.kinesis.demo.service.producer;
 
 import com.alibaba.fastjson.JSON;
-import com.amazonaws.services.kinesis.model.PutRecordsRequest;
-import com.amazonaws.services.kinesis.model.PutRecordsRequestEntry;
 import com.kinesis.demo.pojo.Msg;
-import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.commons.lang3.RandomUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
 import software.amazon.awssdk.core.SdkBytes;
-import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.kinesis.KinesisAsyncClient;
 import software.amazon.awssdk.services.kinesis.model.PutRecordRequest;
-import software.amazon.kinesis.common.KinesisClientUtil;
+import software.amazon.awssdk.services.kinesis.model.PutRecordsRequest;
+import software.amazon.awssdk.services.kinesis.model.PutRecordsRequestEntry;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
-import java.util.function.Consumer;
 
 @Service
 public class ProducerUsingKinesisAsyncClient {
@@ -33,6 +27,7 @@ public class ProducerUsingKinesisAsyncClient {
     @Autowired
     KinesisAsyncClient kinesisAsyncClient;
 
+    //put records one by one
     public void putRecord() {
         Msg msg = new Msg();
         for (int i = 0; i < 10; i++) {
@@ -56,26 +51,32 @@ public class ProducerUsingKinesisAsyncClient {
         }
 
     }
-    public void putRecords() {
-        KinesisAsyncClient kinesisAsyncClient= KinesisClientUtil.createKinesisAsyncClient(KinesisAsyncClient.builder().credentialsProvider(DefaultCredentialsProvider.create()).region(Region.of("us-east-1")));
-        List<PutRecordsRequestEntry> putRecordsRequestEntryList = new ArrayList<>();
 
+    //put records in batch
+    public void putRecords() {
+        Collection<PutRecordsRequestEntry> records = new ArrayList<>();
+//        PutRecordsRequest putRecordsRequest = PutRecordsRequest.builder().streamName(defaultStreamName)
+//                .records(records).build();
+        Msg msg = new Msg();
         for (int i = 0; i < 10; i++) {
-            Msg msg = new Msg();
             msg.setMaintenance_end_date(new Date());
             String msgContent = JSON.toJSONString(msg);
 
-            PutRecordsRequestEntry putRecordsRequestEntry = new PutRecordsRequestEntry();
-            putRecordsRequestEntry.setData(ByteBuffer.wrap(msgContent.getBytes()));
+            records.add(PutRecordsRequestEntry.builder()
+                    .data(SdkBytes.fromByteBuffer(ByteBuffer.wrap(msgContent.getBytes())))
+                    .partitionKey(String.format("partitionKey-%d", i)).build());
 
-            putRecordsRequestEntry.setPartitionKey(String.format("partitionKey-%d", i));
-            putRecordsRequestEntryList.add(putRecordsRequestEntry);
         }
-
-        PutRecordsRequest putRecordsRequest = new PutRecordsRequest();
-        putRecordsRequest.setRecords(putRecordsRequestEntryList);
-        putRecordsRequest.setStreamName(defaultStreamName);
-         kinesisAsyncClient.putRecords(putRecordsRequest);
+        PutRecordsRequest putRecordsRequest = PutRecordsRequest.builder().streamName(defaultStreamName)
+                .records(records).build();
+        kinesisAsyncClient.putRecords(putRecordsRequest);
+        try {
+            System.out.println("failed count = " + kinesisAsyncClient.putRecords(putRecordsRequest).get().failedRecordCount());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 
 

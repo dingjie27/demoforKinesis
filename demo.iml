@@ -145,7 +145,7 @@
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:2.6.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.9" level="project" />
     <orderEntry type="library" name="Maven: io.reactivex.rxjava2:rxjava:2.2.18" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty-codec-http2:4.1.35.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-http2:4.1.46.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.45.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.45.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.45.Final" level="project" />

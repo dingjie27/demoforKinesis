@@ -27,17 +27,27 @@ public class KinesisController {
         producerUsingAPI.putRecord(streamName);
     }
 
-    @ApiOperation(value = "查看kinesis stream name", notes = "stream流的名称")
+    @ApiOperation(value = "get kinesis stream name", notes = "stream name")
     @RequestMapping(value = "streamName", method = RequestMethod.GET)
     public String getStreamName() {
 //       return producer.run();
         return null;
     }
-
-    @RequestMapping(value = "gen", method = RequestMethod.GET)
-    public void generateDataWithKinesisAsyncClient() {
+    @ApiOperation(value = "使用KinesisAsyncClient批量上传数据", notes = "批量性能更好")
+    @RequestMapping(value = "batchput", method = RequestMethod.GET)
+    public void batchPutRecordsUsingKinesisAsyncClient() {
         try {
             producerUsingKinesisAsyncClient.putRecords();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @ApiOperation(value = "使用KinesisAsyncClient逐条上传数据", notes = "依次")
+    @RequestMapping(value = "singleput", method = RequestMethod.GET)
+    public void singlePutRecordUsingKinesisAsyncClient() {
+        try {
+            producerUsingKinesisAsyncClient.putRecord();
         } catch (Exception e) {
             e.printStackTrace();
         }
