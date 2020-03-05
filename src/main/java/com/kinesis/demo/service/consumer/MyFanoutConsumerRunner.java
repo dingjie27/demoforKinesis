@@ -6,15 +6,14 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MyConsumerRunner implements ApplicationRunner {
+public class MyFanoutConsumerRunner implements ApplicationRunner {
     @Autowired
-    Consumer consumer;
+    FanoutConsumer consumer;
 
     @Override
     public void run(ApplicationArguments var1) throws Exception {
         System.out.println("MyConsumerRunner is running.....");
         consumer.run();
-
     }
 
 }

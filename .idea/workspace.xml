@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff4d61e0-ea6f-4293-9854-a1c23e752a93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_35_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_46_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/SampleSingle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/controller/KinesisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/controller/KinesisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/FanoutConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/MyConsumerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/MyConsumerRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/producer/ProducerUsingKinesisAsyncClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/producer/ProducerUsingKinesisAsyncClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/Consumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/MyConsumerRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/MyConsumerRunner.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +211,7 @@
       <workItem from="1562308758937" duration="1822000" />
       <workItem from="1583304765372" duration="4090000" />
       <workItem from="1583309206479" duration="37000" />
-      <workItem from="1583309520417" duration="23298000" />
+      <workItem from="1583309520417" duration="24265000" />
     </task>
     <task id="LOCAL-00001" summary="commit my new updates">
       <created>1556155578213</created>
@@ -274,8 +272,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/RecordProcessor.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="60" />
+          <line>48</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/RecordProcessor.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="64" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 
 @Service
-public class Consumer {
+public class FanoutConsumer {
     private static String streamName = "my-test-kinesis-data-stream";
 
     public static void run() {
