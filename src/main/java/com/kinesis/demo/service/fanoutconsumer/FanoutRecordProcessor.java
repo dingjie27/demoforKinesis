@@ -1,4 +1,4 @@
-package com.kinesis.demo.service.consumer;
+package com.kinesis.demo.service.fanoutconsumer;
 
 
 import org.slf4j.Logger;

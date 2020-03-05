@@ -1,4 +1,4 @@
-package com.kinesis.demo.service.consumer;
+package com.kinesis.demo.service.fanoutconsumer;
 
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.regions.Region;
