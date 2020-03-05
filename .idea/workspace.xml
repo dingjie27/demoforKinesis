@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff4d61e0-ea6f-4293-9854-a1c23e752a93" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/SampleSingle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/FanoutConsumerRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/standardconsumer/StandardConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/FanoutConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/MyConsumerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/MyConsumerRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/Consumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/MyConsumerRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/MyConsumerRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/FanoutConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/FanoutConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/consumer/MyFanoutConsumerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/standardconsumer/StandardConsumerRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/fanoutconsumer/FanoutConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/fanoutconsumer/FanoutRecordProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/standardconsumer/StandardRecordProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/fanoutconsumer/FanoutRecordProcessorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/standardconsumer/StandardRecordProcessorFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/producer/ProducerUsingKinesisAsyncClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/producer/ProducerUsingKinesisAsyncClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/MyConsumerRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/SampleSingle$SampleRecordProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/SampleSingle$SampleRecordProcessorFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/consumer/SampleSingle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/fanoutconsumer/FanoutConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/fanoutconsumer/FanoutRecordProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/fanoutconsumer/FanoutRecordProcessorFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/producer/ProducerUsingKinesisAsyncClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/kinesis/demo/service/producer/ProducerUsingKinesisAsyncClient.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,11 +101,11 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kinesis.demo.service.standardconsumer" />
       <recent name="com.kinesis.demo.configuraion" />
       <recent name="com.kinesis.demo.service.producer" />
       <recent name="com.kinesis.demo.service.fanoutconsumer" />
       <recent name="com.kinesis.demo.service" />
-      <recent name="com.kinesis.demo.producer" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.kinesis.demo.service.producer" />
@@ -211,7 +223,7 @@
       <workItem from="1562308758937" duration="1822000" />
       <workItem from="1583304765372" duration="4090000" />
       <workItem from="1583309206479" duration="37000" />
-      <workItem from="1583309520417" duration="24265000" />
+      <workItem from="1583309520417" duration="27865000" />
     </task>
     <task id="LOCAL-00001" summary="commit my new updates">
       <created>1556155578213</created>
