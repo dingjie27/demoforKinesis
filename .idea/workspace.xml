@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ff4d61e0-ea6f-4293-9854-a1c23e752a93" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/fanoutconsumer/FanoutConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/fanoutconsumer/FanoutConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/fanoutconsumer/FanoutConsumerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/fanoutconsumer/FanoutConsumerRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/standardconsumer/StandardConsumerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kinesis/demo/service/standardconsumer/StandardConsumerRunner.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +212,7 @@
       <workItem from="1583309520417" duration="32099000" />
       <workItem from="1583401502817" duration="3309000" />
       <workItem from="1583734710498" duration="152000" />
-      <workItem from="1583734866037" duration="36000" />
+      <workItem from="1583734866037" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="commit my new updates">
       <created>1556155578213</created>

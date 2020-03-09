@@ -15,7 +15,10 @@ public class StandardConsumerRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments var1) throws Exception {
-        log.info("My standard consumer is running.....");
-        consumer.startConsume();
+        /**
+         * open this if you want your consumer to run immediately after the project is started
+         */
+//        log.info("My standard consumer is running.....");
+//        consumer.startConsume();
     }
 }
